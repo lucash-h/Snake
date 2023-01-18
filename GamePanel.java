@@ -66,7 +66,7 @@ public class GamePanel extends JPanel implements ActionListener {
                     g.fillRect(x[i], y[i], unit_size, unit_size);
                 } else {
                     g.setColor(Color.green);
-                    //g.setColor(new Color(random.nexInt(255)));
+                    g.setColor(new Color(random.nextInt(255)));
                     g.fillRect(x[i], y[i], unit_size, unit_size);
                 }
             }
@@ -107,7 +107,7 @@ public class GamePanel extends JPanel implements ActionListener {
 
     }
 
-    public void checkfood() {
+    public void checkfood() { // keeps track of body part to food and creates new food
         if((x[0] == x_coordinate_food) && (y[0] == y_coordinate_food)) {
             body_parts++;
             foodeaten++;
